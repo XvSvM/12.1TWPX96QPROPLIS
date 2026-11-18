@@ -52,7 +52,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Display & Graphics
 TARGET_SCREEN_DENSITY := 240
-TARGET_RECOVERY_PIXEL_FORMAT := ARGB_8888
+TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 RECOVERY_GRAPHICS_FORCE_USE_LINELENGTH := true
 TW_TARGET_USES_MALI := true
 
@@ -166,15 +166,9 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
 # for the LineageOS 23.2 / Android 16 ROM.
 TW_DEVICE_VERSION := A16
 TW_THEME := landscape_hdpi
-# The panel is mounted upside down (the ROM rotates 180 too). TW_ROTATION only rotates the
-# drawing; touch already reports upright coordinates, so no touch flip is needed.
-TW_ROTATION := 180
 # MTP: kernel configfs f_mtp (mtp.gs0 -> /dev/mtp_usb), set up in
 # init.recovery.samsungexynos7580.rc. It was off until 2026-10-19 because USB died on the
 # first function switch; kernel 0011 (reconnect after rebind) and 0013 (FunctionFS reset) fixed that.
-TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
-TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 160
 RECOVERY_SDCARD_ON_DATA := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_REBOOT_BOOTLOADER := true
