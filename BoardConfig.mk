@@ -116,6 +116,8 @@ VENDOR_SECURITY_PATCH := 2021-08-01
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+
 # TWRP
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
