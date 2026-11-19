@@ -7,12 +7,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-
--include vendor/twrp/config/common.mk
-
+$(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/askey/adt3/device.mk)
 
 PRODUCT_DEVICE := adt3
