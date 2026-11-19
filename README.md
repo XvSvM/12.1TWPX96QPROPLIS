@@ -1,9 +1,8 @@
 # TWRP device tree for ADT-3 (adt3 / diana_p1)
 
-Allwinner sun55iw3p1 based device (Askey ADT-3).
-Recovery lives in **vendor_boot**.
+Allwinner sun55iw3p1. Recovery in **vendor_boot**.
 
-## Build with Action-TWRP-Builder
+## Action-TWRP-Builder settings
 
 - BUILD_TARGET = **vendorboot**
 - MAKEFILE_NAME = twrp_adt3
